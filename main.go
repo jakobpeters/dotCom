@@ -17,7 +17,8 @@ func init() {
 }
 func main() {
 	http.HandleFunc("/", index)
-	err := http.ListenAndServe(":80", nil)
+	//err := http.ListenAndServe(":80", nil)
+	err := http.ListenAndServeTLS(":443", "/usr/local/etc/letsencrypt/live/www.jakobpeters.com/fullchain.pem", "/usr/local/etc/letsencrypt/live/www.jakobpeters.com/privkey.pem", nil)
 	if err != nil {
 		fmt.Println(err)
 	}
