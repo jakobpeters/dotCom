@@ -1,0 +1,5 @@
+sudo certbot certonly --webroot -d jakobpeters.com -d www.jakobpeters.com
+sudo certbot renew
+
+sudo crontab -e
+00   6   1,15 *   * certbot renew
