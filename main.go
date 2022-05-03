@@ -23,6 +23,7 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
+
 }
 
 func redirect(w http.ResponseWriter, r *http.Request) {
