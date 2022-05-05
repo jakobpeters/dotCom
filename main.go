@@ -24,7 +24,7 @@ func main() {
 
 	http.HandleFunc("/", index)
 
-	err := http.ListenAndServe(":7777", nil)
+	err := http.ListenAndServe(":80", nil)
 	if err != nil {
 		fmt.Print(err)
 	}
